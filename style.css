@@ -1,0 +1,246 @@
+@font-face {
+    font-family: declaration;
+    src: url(USDeclaration.ttf);
+}
+
+@font-face {
+    font-family: kirnberg;
+    src: url(AdineKirnberg-Alternate.ttf);
+}
+
+@font-face {
+    font-family: minion;
+    src: url(MinionPro-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    font-family: minion;
+}
+
+.site {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.site-intro {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.25), 
+        rgba(0, 0, 0, 0.25)
+      ), url(flag.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.cta-container {
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+}
+
+.cta-container a:any-link {
+    text-decoration: none;
+    color: white;
+}
+
+.site-intro .cta {
+    font-size: 10vw;
+    font-family: declaration;
+}
+
+.site-intro .cta-intro {
+    font-size: 7vw;
+    font-weight: 500;
+    font-family: kirnberg;
+    text-align: center;
+}
+
+@media screen and (min-width: 1020px) {
+    .cta-intro {
+        font-size: 72px !important;
+    }
+
+    .cta {
+        font-size: 102px !important;
+    }
+}
+
+.vp-max {
+    height: 100vh;
+}
+
+.bg-page {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.1), 
+        rgba(0, 0, 0, 0.1)
+      ), url(page-bg.jpg);
+    background-size: cover;
+    background-repeat: repeat-x;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    padding: 25px 0;
+}
+
+.social-media {
+    height: 100px;
+    width: 100%;
+
+    opacity: 0.7;
+
+    margin-right: 12.5px;
+    margin-bottom: 12.5px;
+
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+}
+
+.social-media-items {
+    display: flex;
+    flex-flow: row-reverse;
+
+    height: min-content;
+    width: min-content;
+
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+}
+
+.social-media a {
+    height: 10vw;
+    width: 10vw;
+
+    max-width: 50px;
+    max-height: 50px;
+
+    background-repeat: no-repeat;
+    /* background-position: bottom; */
+
+    transition: 0.05s filter linear;
+    filter: brightness(100%);
+}
+
+.social-media a:active {
+    filter: brightness(85%);
+}
+
+.social-media a:not(:last-child) {
+    margin-left: 10px;
+}
+
+.social-media .social-snapchat {
+    background-image: url(socials/Snapchat.svg);
+}
+
+.social-media .social-instagram {
+    background-image: url(socials/Instagram.svg);
+}
+
+.social-media .social-tumblr {
+    background-image: url(socials/Tumblr.svg);
+}
+
+.social-media .social-facebook {
+    background-image: url(socials/Facebook.svg);
+}
+
+.section-title {
+    font-family: kirnberg;
+    font-size: 12vw;
+    margin-top: 15px;
+}
+
+.section-title-num {
+    font-size: 24vw;
+    line-height: 0px;
+}
+
+
+@media screen and (min-width: 1058px) {
+    .section-title {
+        font-size: 127px;
+    }
+
+    .section-title-num {
+        font-size: 253px;
+    }
+}
+
+.section-text {
+    margin: 0 75px;
+    padding-bottom: 15px;
+}
+
+@media(max-width: 700px) {
+    .section-text {
+        margin: 0 25px;
+    }
+}
+
+.show-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+@media(max-width: 500px) {
+    /** change grid to col only **/
+}
+
+.text-center {
+    text-align: center;
+}
+
+.item {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.section-text p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.footer {
+    padding: 100px 25px;
+
+    text-align: center;
+
+    display: flex;
+    flex-flow: row;
+}
+
+.footer-item {
+    display: flex;
+    flex-flow: column;
+}
+
+.footer-item a:any-link {
+    color: inherit;
+}
+
+.footer-item:not(:first-child) {
+    border-left-style: solid;
+    border-left-color: black;
+    border-left-width: 1px;
+}
