@@ -219,6 +219,10 @@ a:any-link {
 		display: flex;
 		flex-flow: column;
 	}
+	
+	.split-view .info-block {
+		margin: 10px 0 !important;
+	}
 }
 
 /** end info responsive **/
