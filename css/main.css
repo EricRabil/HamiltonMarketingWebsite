@@ -1,0 +1,237 @@
+@font-face {
+	font-family: declaration;
+	src: url(../fonts/declaration.ttf);
+}
+
+body {
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+a:any-link {
+	color: white;
+}
+
+.intro {
+	height: 100vh;
+	
+	display: flex;
+	flex-flow: column;
+}
+
+.split-view {
+	display: grid;
+	
+	grid-template-rows: 50% 50%;
+	grid-template-columns: 50% 50%;
+}
+
+.text-center {
+	text-align: center;
+}
+
+/** begin navbar section **/
+
+.navbar {
+	display: flex;
+	flex-flow: row;
+	height: 50px;
+	background-color: black;
+	
+	align-items: center;
+	
+	padding: 0 20px;
+	
+	text-transform: uppercase;
+	
+	/** aint nobody goin over me **/
+	z-index: 1000;
+}
+
+.nav-item {
+	-webkit-user-select: none;
+}
+
+.nav-item:first-child {
+	padding-right: 10px;
+	border-right: 1px solid white;
+}
+
+.nav-item:last-child {
+	padding-left: 10px;
+	border-left: 1px solid white;
+}
+
+.nav-item, .nav-item:any-link {
+	color: white;
+	text-decoration: none;
+}
+
+.nav-item-focus {
+	flex-grow: 1;
+	text-align: center;
+}
+
+/** end navbar section **/
+
+/** begin hook **/
+
+.intro-graphic {
+	height: 100%;
+	
+	background-image: radial-gradient(
+			rgba(0, 0, 0, 0),
+			black
+	    ), url(../img/flag.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	
+	display: flex;
+	flex-flow: column;
+	
+	align-items: center;
+	justify-content: center;
+}
+
+.intro-graphic .scroll-hint-up {
+	position: absolute;
+	bottom: 0;
+	
+	width: 200px;
+	height: 30px;
+	
+	text-align: center;
+	color: white;
+	
+	background-color: black;
+	
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	
+	cursor: pointer;
+}
+
+.hamilton-cutout {
+	background-image: url(../img/hamilton-cutout.png);
+	
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	
+	height: 354px;
+	width: 306px;
+	
+	z-index: 0;
+}
+
+.hamilton-title {
+	font-family: declaration;
+	color: white;
+	font-size: 60px;
+	z-index: 10;
+	
+	margin-top: -70px;
+	
+	position: absolute;
+	
+	-webkit-user-select: none;
+}
+
+/** begin hook responsive **/
+
+@media screen and (max-width: 425px) {
+	.hamilton-title {
+		font-size: 48px;
+	}
+}
+
+/** end hook responsive **/
+
+/** end hook **/
+
+/** begin info section **/
+
+.show-info {
+	width: calc(100% - 50px);
+	background-color: black;
+	padding: 50px 25px;
+	color: white;
+	
+	display: flex;
+	flex-flow: column;
+}
+
+.show-info-wrap {
+	flex-grow: 1;
+	max-width: 700px;
+	
+	margin: 0 auto;
+}
+
+.info-block {
+	display: flex;
+	flex-flow: column;
+	
+	margin: 10px 0;
+}
+
+.split-view .info-block:first-child {
+	margin-right: 5px;
+}
+
+.split-view .info-block:last-child {
+	margin-left: 5px;
+}
+
+.show-info .split-view:last-of-type .info-block {
+	margin-bottom: 0;
+}
+
+.info-block .info-title {
+	text-transform: uppercase;
+	
+	font-size: 22px;
+	
+	border-bottom: 1px solid white;
+	margin-bottom: 5px;
+	
+	height: min-content;
+}
+
+.info-block .info-text {
+	margin: 0;
+	
+	font-size: 18px;
+	flex-grow: 1;
+}
+
+.info-text p:first-child {
+	margin: 0;
+}
+
+.info-text p {
+	margin: 5px 0;
+}
+
+/** begin info responsive **/
+
+@media screen and (max-width: 600px) {
+	.show-info .split-view {
+		display: flex;
+		flex-flow: column;
+	}
+}
+
+/** end info responsive **/
+
+/** end info section **/
+
+/** begin footer section **/
+
+footer.info-block {
+	margin: 0;
+}
+
+/** end footer section **/
