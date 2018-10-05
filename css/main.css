@@ -106,16 +106,8 @@ a:any-link {
 	flex-flow: column;
 	align-items: center;
 	justify-content: center;
-}
-
-.cutout-container {
-	display: flex;
-	flex-flow: column;
 	
-	flex-grow: 1;
-	
-	align-items: center;
-	justify-content: center;
+	align-self: flex-end;
 }
 
 .hamilton-cutout {
