@@ -94,9 +94,6 @@ a:any-link {
 }
 
 .intro-graphic .scroll-hint-up {
-	position: absolute;
-	bottom: 0;
-	
 	width: 200px;
 	height: 30px;
 	
@@ -109,8 +106,16 @@ a:any-link {
 	flex-flow: column;
 	align-items: center;
 	justify-content: center;
+}
+
+.cutout-container {
+	display: flex;
+	flex-flow: column;
 	
-	cursor: pointer;
+	flex-grow: 1;
+	
+	align-items: center;
+	justify-content: center;
 }
 
 .hamilton-cutout {
@@ -156,7 +161,7 @@ a:any-link {
 .show-info {
 	width: calc(100% - 50px);
 	background-color: black;
-	padding: 50px 25px;
+	padding: 25px;
 	color: white;
 	
 	display: flex;
