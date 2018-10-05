@@ -231,4 +231,12 @@ footer.info-block {
 	margin: 0;
 }
 
+.social-icon {
+	font-size: 24px;
+}
+
+.social-icon:not(:first-child) {
+	margin-left: 2.5px;
+}
+
 /** end footer section **/
